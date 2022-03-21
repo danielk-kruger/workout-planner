@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workout Planner</title>
+
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./master.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h4 class="center-align">My Workout Planner</h4>
+
+      <div class="content indigo z-depth-3">
+        <div class="content-wrapper">
+          <a
+            href="#"
+            class="dropdown-trigger btn-floating btn list-menu indigo darken-3 z-depth-2"
+            data-target="list_options"
+          >
+            <i class="material-icons indigo-text text-lighten-5">more_vert</i>
+          </a>
+
+          <ul class="dropdown-content" id="list_options">
+            <li><a href="#" class="indigo-text">Edit</a></li>
+            <li><a href="#" class="indigo-text">Add Items</a></li>
+            <li>
+              <a href="#" class="indigo-text">Delete Items</a>
+            </li>
+          </ul>
+
+          <div class="content-heading">
+            <h3 class="plan-date grey-text text-lighten-3">Monday</h3>
+            <div class="muscle-group">
+              <h5 class="muscle-group-title indigo-text text-lighten-5">
+                Muscle Groups:
+              </h5>
+              <div class="chips">
+                <input class="input-hidden" disabled />
+              </div>
+            </div>
+            <form>
+              <div class="text-field input-field inline">
+                <input type="text" id="add-item" />
+                <label for="add-item">Enter a Workout</label>
+              </div>
+              <div class="submit-field input-field inline">
+                <input
+                  type="submit"
+                  id="add-btn"
+                  class="btn indigo darken-3 grey-text text-lighten-2 z-depth-2 inline"
+                  value="Add"
+                />
+              </div>
+            </form>
+          </div>
+
+          <div class="workout-plan">
+            <ul class="list-container indigo darken-4 collection">
+              <!-- <li class="list-item collection-item">Item</li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+      integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
