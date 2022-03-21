@@ -17,10 +17,10 @@ function addItem(val, type) {
   const listItem = document.createElement(`${type}`);
 
   if (type == "a") {
-    const h5 = document.createElement("h6");
-    h5.textContent = val;
-    listItem.classList = `collection-item indigo darken-3 indigo-text text-lighten-5`;
-    listItem.appendChild(h5);
+    const h6 = document.createElement("h6");
+    h6.textContent = val;
+    listItem.classList = `collection-item indigo darken-2 indigo-text text-lighten-5`;
+    listItem.appendChild(h6);
     listContainer.appendChild(listItem);
   } else {
     listItem.classList = `collection-item indigo lighten-2 grey-text text-darken-4`;
@@ -32,15 +32,11 @@ function addItem(val, type) {
 function insertCategoryItem(elem) {
   const categories = document.querySelectorAll("a.collection-item");
 
-  categories.forEach((item) => {
-    if (item.classList.contains("active")) {
-      listContainer.insertBefore(elem, item.nextSibling);
-
-      if (item.nextSibling === document.querySelector("li.collection-item")) {
-        console.log("ahah");
-      }
-    }
-  });
+  categories.forEach((item, index) =>
+    item.classList.contains("active")
+      ? listContainer.insertBefore(elem, categories[index + 1])
+      : console.log("Error")
+  );
 }
 
 function initDropdown() {
