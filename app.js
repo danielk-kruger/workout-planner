@@ -17,7 +17,7 @@ function addItem(val, type) {
   const listItem = document.createElement(`${type}`);
 
   if (type == "a") {
-    const h5 = document.createElement("h5");
+    const h5 = document.createElement("h6");
     h5.textContent = val;
     listItem.classList = `collection-item indigo darken-3 indigo-text text-lighten-5`;
     listItem.appendChild(h5);
